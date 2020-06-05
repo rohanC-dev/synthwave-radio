@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Radio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
+    <script src="https://kit.fontawesome.com/38214e4a02.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/scripts/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div style = "margin-top:20px;">
+        <div class="text-center">
+            <img src="https://f4.bcbits.com/img/a2776765918_10.jpg" class="rounded mx-auto d-block" alt="Album Art">
+            <br>
+            <h1 id = "trackTitle"></h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="backward" class="btn btn-info btn-lg"><i class="fas fa-backward"></i></button>
+            <button id="play" type="button" class="btn btn-primary btn-lg" data-toggle="button" aria-pressed="false">
+                <i id = "play-icon"class="fas fa-play"></i>
+            </button>
+            <button id="forward" class="btn btn-info btn-lg"><i class="fas fa-forward"></i></button>
+        </div>
+        
+        <button class="btn">
+            <div class="btn__content">
+            The future is now_
+            </div>
+            <span class="btn__label">r25</span>
+          </button>
+
+        <div class = "d-flex justify-content-center">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h4>Track List</h4>
+                            </button>
+                        </h2>
+                    </div>
+        
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class = "list-group list-group-flush" id = "trackList">
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
