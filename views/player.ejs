@@ -17,59 +17,84 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
-    <script src="https://kit.fontawesome.com/38214e4a02.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
     <script type="text/javascript" src="/scripts/script.js"></script>
-
-
-
-
+    <link rel="stylesheet" href="/stylesheets/cyberpunk_btn.css">
 </head>
 
 <body>
-    <div style = "margin-top:20px;">
-        <div class="text-center">
-            <img src="https://f4.bcbits.com/img/a2776765918_10.jpg" class="rounded mx-auto d-block" alt="Album Art">
-            <br>
-            <h1 id = "trackTitle"></h1>
-        </div>
-        <div class="d-flex justify-content-center">
-            <button id="backward" class="btn btn-info btn-lg"><i class="fas fa-backward"></i></button>
-            <button id="play" type="button" class="btn btn-primary btn-lg" data-toggle="button" aria-pressed="false">
-                <i id = "play-icon"class="fas fa-play"></i>
-            </button>
-            <button id="forward" class="btn btn-info btn-lg"><i class="fas fa-forward"></i></button>
-        </div>
-        
-        <button class="btn">
-            <div class="btn__content">
-            The future is now_
-            </div>
-            <span class="btn__label">r25</span>
-          </button>
 
-        <div class = "d-flex justify-content-center">
-            <div class="accordion" id="accordionExample">
+    <div style="margin-top:20px;">
+
+
+        <div class="text-center">
+            <button class="btn-image">
+                <div class="btn__content">
+                    <img id="album_art" src="" class="rounded mx-auto d-block" alt="Album Art">
+                </div>
+                <span class="btn__label">r25</span>
+            </button>
+            <br>
+            <h1 id="trackTitle"></h1>
+        </div>
+
+
+
+
+        <div class="d-flex justify-content-center">
+
+            <button id="backward" class="btn" type="button" data-toggle="button" aria-pressed="false">
+                <div class="btn__content">
+                    <i class="fas fa-backward fa-3x"></i>
+                </div>
+            </button>
+
+            <button id="play" class="btn" type="button" data-toggle="button" aria-pressed="false">
+                <div id="btn__content" class="btn__content">
+                    <i id="play-icon" class="fas fa-play fa-3x"></i>
+                </div>
+
+            </button>
+
+            <button id="forward" class="btn" type="button" data-toggle="button" aria-pressed="false">
+                <div class="btn__content">
+                    <i class="fas fa-forward fa-3x"></i>
+                </div>
+            </button>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center">
+            <div class="accordion accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button id="track-list-btn"
+                                class="btn-accordion btn__content-accordion btn-link btn-block text-left" type="button"
+                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne" style = "text-decoration: none;">
                                 <h4>Track List</h4>
                             </button>
                         </h2>
                     </div>
-        
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            <ul class = "list-group list-group-flush" id = "trackList">
-    
+
+                            <ul class="list-group list-group-flush" id="trackList">
+
                             </ul>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    
 </body>
 
 </html>

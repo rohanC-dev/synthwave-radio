@@ -1,12 +1,15 @@
-
-
 body { 
+    font-family: Tomorrow, sans-serif;
     background: url("https://i.redd.it/4sdqhxmo3gd41.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+
+#trackTitle{
+    color: white;
+}
 
 img{
     width: 400px;
@@ -20,15 +23,29 @@ img{
 .card-body{
     padding: 0px;
 }
+
+
 .list-group-item.pause{
     z-index: 2;
     color: #fff;
-    background-color:red;
-    border-color: red;
-    border-radius: .5rem
+    background-color: #ff003c;
+    border-color: #ff003c;
+}
+
+.btn-link:hover{
+    color: #ff003c;
+}
+
+button:focus {
+    outline: none;
 }
 
 #backward,#play,#forward{
     margin: 20px;
     width: 80px;
 }
+
+input[type="range"] {
+    
+    transform: rotate(270deg);
+ }
