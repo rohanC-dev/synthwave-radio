@@ -1,3 +1,16 @@
+// var mongoose = require("mongoose");
+// mongoose.connect("mongodb://localhost:27017/synthwave_radio_stats", { useNewUrlParser: true, useUnifiedTopology: true });
+
+
+// var trackSchema = new mongoose.Schema({
+//     name: String,
+//     plays: Number
+// });
+
+// var Track = mongoose.model("Track", trackSchema);
+
+
+
 
 $(document).ready(function () {
 
@@ -8,10 +21,26 @@ $(document).ready(function () {
             img: "/images/ALEX - Occult.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ALEX%20-%20Occult.mp3"],
+                    src: ["/music/ALEX - Occult.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    
+                    onloaderror: function(error) {
+                        console.log('there was an error loading ALEX - Occult.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing ALEX - Occult.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
+                        // Track.findByIdAndUpdate("5ee509fabc93a01644cc651c, )
                     }
                 }),
         },
@@ -21,9 +50,23 @@ $(document).ready(function () {
             img: "/images/Armz - Owl Vision.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Armz%20-%20Owl%20Vision.mp3"],
+                    src: ["/music/Armz - Owl Vision.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Armz - Owl Vision.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Armz - Owl Vision.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -34,22 +77,50 @@ $(document).ready(function () {
             img: "/images/Atrey - Abyss.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Atrey%20-%20Abyss.mp3"],
+                    src: ["/music/Atrey - Abyss.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Atrey - Abyss.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Atrey - Abyss.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
         },
-        
+
         {
             name: "Big Game Hunter - Firefury",
             img: "/images/Big Game Hunter - Firefury.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Big%20Game%20Hunter%20-%20Firefury.mp3"],
+                    src: ["/music/Big Game Hunter - Firefury.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Big Game Hunter - Firefury.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Big Game Hunter - Firefury.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -62,7 +133,21 @@ $(document).ready(function () {
                 new Howl({
                     src: ["/music/BIODRIVE - Psychopath.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading BIODRIVE - Psychopath.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing BIODRIVE - Psychopath.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -75,7 +160,21 @@ $(document).ready(function () {
                 new Howl({
                     src: ["/music/Blanke - Voice In The Machine.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Blanke - Voice In The Machine.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Blanke - Voice In The Machine.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -88,7 +187,48 @@ $(document).ready(function () {
                 new Howl({
                     src: ["/music/Cult of Neon - Blanc Noir.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Cult of Neon - Blanc Noir.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Cult of Neon - Blanc Noir.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
+                        $("#forward").click();
+                    }
+                }),
+        },
+
+        {
+            name: "Chaos Vector - Lex Talionis",
+            img: "/",
+            sound:
+                new Howl({
+                    src: ["/music/Chaos Vector - Lex Talionis.mp3"],
+                    volume: 0.1,
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Chaos Vector - Lex Talionis.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Chaos Vector - Lex Talionis.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -101,7 +241,43 @@ $(document).ready(function () {
                 new Howl({
                     src: ["/music/Cynthetic - NARC.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onloaderror: function(error) {
+                        console.log('there was an error loading Cynthetic - NARC.mp3: ', error);
+                    },
+                    onplayerror: function(error) {
+                        console.log('there was an error playing Cynthetic - NARC.mp3: ', error);
+                    },
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
+                        $("#forward").click();
+                    }
+                }),
+        },
+
+        {
+            name: "Cyberpunk 2077 - Scavenger Hideout Music (EurocorpFx Remake)",
+            img: "/images/Cyberpunk 2077 - Scavenger Hideout Music (EurocorpFx Remake).jpg",
+            sound:
+                new Howl({
+                    src: ["/music/Cyberpunk 2077 - Scavenger Hideout Music (EurocorpFx Remake).mp3"],
+                    volume: 0.1,
+                    preload: false,
+                    
+                    // onplay: function(){
+                    //     music[track_index].sound.load();
+                    // },
+                    // onstop: function () {
+                    //     music[track_index].sound.unload();
+                    // },
+                    onend: function () {
+                        //music[track_index].sound.unload();
                         $("#forward").click();
                     }
                 }),
@@ -112,9 +288,10 @@ $(document).ready(function () {
             img: "/images/DataDrive - Hellrider.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/DataDrive%20-%20Hellrider.mp3"],
+                    src: ["/music/DataDrive - Hellrider.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -125,9 +302,10 @@ $(document).ready(function () {
             img: "/images/Descender - Desolate Plain.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Descender%20-%20Desolate%20Plain.mp3"],
+                    src: ["/music/Descender - Desolate Plain.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -138,9 +316,10 @@ $(document).ready(function () {
             img: "/images/Digitalism - Miami Showdown.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Digitalism%20-%20Miami%20Showdown.mp3"],
+                    src: ["/music/Digitalism - Miami Showdown.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -151,9 +330,10 @@ $(document).ready(function () {
             img: "/images/DJ Alina - Destiny (доля).jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/DJ%20Alina%20-%20Destiny%20%5B%D0%B4%D0%BE%D0%BB%D1%8F%5D.mp3"],
+                    src: ["/music/DJ Alina - Destiny (доля).mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -164,9 +344,10 @@ $(document).ready(function () {
             img: "/images/Donbor - Against The Law.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/DONBOR%20-%20Against%20The%20Law.mp3"],
+                    src: ["/music/DONBOR - Against The Law.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -177,9 +358,24 @@ $(document).ready(function () {
             img: "/images/Donbor - Breaking My Brain.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Donbor%20-%20Breaking%20My%20Brain.mp3"],
+                    src: ["/music/Donbor - Breaking My Brain.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
+                        $("#forward").click();
+                    }
+                }),
+        },
+        
+        {
+            name: "Eustass Kid - Starchild",
+            img: "/images/Eustass Kid - Starchild.jpg",
+            sound:
+                new Howl({
+                    src: ["/music/Eustass Kid - Starchild.mp3"],
+                    volume: 0.1,
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -203,9 +399,10 @@ $(document).ready(function () {
             img: "/images/Hubrid & Billy Mays - Pentode.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Hubrid%20%26%20Billy%20Mays%20-%20Pentode.mp3"],
+                    src: ["/music/Hubrid & Billy Mays - Pentode.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -216,9 +413,10 @@ $(document).ready(function () {
             img: "/images/Hyper - New Wave.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Hyper%20-%20New%20Wave.mp3"],
+                    src: ["/music/Hyper - New Wave.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -229,9 +427,10 @@ $(document).ready(function () {
             img: "/images/Mascarpone - Golden Blood.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Mascarpone%20-%20Golden%20Blood.mp3"],
+                    src: ["/music/Mascarpone - Golden Blood.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -242,9 +441,10 @@ $(document).ready(function () {
             img: "/images/Mental Minority - Dystopia Now.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Mental%20Minority%20-%20Dystopia%20Now.mp3"],
+                    src: ["/music/Mental Minority - Dystopia Now.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -255,9 +455,10 @@ $(document).ready(function () {
             img: "/images/Misanthropix - Boostergangs.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Misanthropix%20-%20Boostergangs.mp3"],
+                    src: ["/music/Misanthropix - Boostergangs.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -268,9 +469,10 @@ $(document).ready(function () {
             img: "/images/N I M B V S - Dusk.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/N%20I%20M%20B%20V%20S%20-%20Dusk.mp3"],
+                    src: ["/music/N I M B V S - Dusk.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -281,9 +483,10 @@ $(document).ready(function () {
             img: "/images/Nemix - Feed Them Lies.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Nemix%20-%20Feed%20Them%20Lies.mp3"],
+                    src: ["/music/Nemix - Feed Them Lies.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -294,9 +497,24 @@ $(document).ready(function () {
             img: "/images/NightmareOwl - Strange Home.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/NightmareOwl%20-%20Strange%20Home.mp3"],
+                    src: ["/music/NightmareOwl - Strange Home.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
+                        $("#forward").click();
+                    }
+                }),
+        },
+
+        {
+            name: "Ostenvegr - MISSION II - Toward Alpha Centauri",
+            img: "/images/Ostenvegr - MISSION II - Toward Alpha Centauri.jpg",
+            sound:
+                new Howl({
+                    src: ["/music/Ostenvegr - MISSION II - Toward Alpha Centauri.mp3"],
+                    volume: 0.1,
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -307,9 +525,10 @@ $(document).ready(function () {
             img: "/images/Perturbator - Vigilante 2084.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Perturbator%20-%20Vigilante%202084.mp3"],
+                    src: ["/music/Perturbator - Vigilante 2084.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -320,9 +539,10 @@ $(document).ready(function () {
             img: "/images/REEVE - Pantera GT5.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/REEVE%20-%20Pantera%20GT5.mp3"],
+                    src: ["/music/REEVE - Pantera GT5.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -333,22 +553,24 @@ $(document).ready(function () {
             img: "/images/Shortwire - Reconfig.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Shortwire%20-%20Reconfig.mp3"],
+                    src: ["/music/Shortwire - Reconfig.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
         },
-        
+
         {
             name: "Sidewalks and Skeletons - Sleep Paralysis",
             img: "/images/Sidewalks and Skeletons - Sleep Paralysis.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Sidewalks%20and%20Skeletons%20-%20Sleep%20Paralysis.mp3"],
+                    src: ["/music/Sidewalks and Skeletons - Sleep Paralysis.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -359,9 +581,10 @@ $(document).ready(function () {
             img: "/images/Sidewalks and Skeletons - The End.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Sidewalks%20and%20Skeletons%20-%20The%20End.mp3"],
+                    src: ["/music/Sidewalks and Skeletons - The End.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -372,9 +595,10 @@ $(document).ready(function () {
             img: "/images/Speed Machine - Alpha Sector.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Speed%20Machine%20-%20Alpha%20Sector.mp3"],
+                    src: ["/music/Speed Machine - Alpha Sector.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -385,9 +609,10 @@ $(document).ready(function () {
             img: "/images/Speed Machine - Mechanized Dystopia.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Speed%20Machine%20-%20Mechanized%20Dystopia.mp3"],
+                    src: ["/music/Speed Machine - Mechanized Dystopia.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -398,9 +623,10 @@ $(document).ready(function () {
             img: "/images/Stilz - Streets (Feat. Electric Dragon).jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Stilz%20-%20Streets%20%5BFeat.%20Electric%20Dragon%5D.mp3"],
+                    src: ["/music/Stilz - Streets (Feat. Electric Dragon).mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -411,9 +637,24 @@ $(document).ready(function () {
             img: "/images/Street Fever - Disgrace [ZONE - Dystopian Elements].jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Street%20Fever%20-%20Disgrace%20%5BZONE%20-%20Dystopian%20Elements%5D.mp3"],
+                    src: ["/music/Street Fever - Disgrace [ZONE - Dystopian Elements].mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
+                        $("#forward").click();
+                    }
+                }),
+        },
+
+        {
+            name: "TeknoAXE - Army of Cyborgs",
+            img: "/images/TeknoAXE - Army of Cyborgs.jpg",
+            sound:
+                new Howl({
+                    src: ["/music/TeknoAXE - Army of Cyborgs.mp3"],
+                    volume: 0.1,
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -424,9 +665,24 @@ $(document).ready(function () {
             img: "/images/The Encounter - Astrid (Feat. Street Cleaner).jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/The%20Encounter%20-%20Astrid%20%5BFeat.%20Street%20Cleaner%5D.mp3"],
+                    src: ["/music/The Encounter - Astrid (Feat. Street Cleaner).mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
+                        $("#forward").click();
+                    }
+                }),
+        },
+
+        {
+            name: "The Encounter - Within",
+            img: "/images/The Encounter - Astrid (Feat. Street Cleaner).jpg",
+            sound:
+                new Howl({
+                    src: ["/music/The Encounter - Within"],
+                    volume: 0.1,
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -437,9 +693,10 @@ $(document).ready(function () {
             img: "/images/Vector Kid - Orion (BLACK NOIZE VISION).jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/The%20Encounter%20-%20Astrid%20%5BFeat.%20Street%20Cleaner%5D.mp3"],
+                    src: ["/music/Vector Kid - Orion (BLACK NOIZE VISION).mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -450,9 +707,10 @@ $(document).ready(function () {
             img: "/images/Vosto - Cyber Fire.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/Vosto%20-%20Cyber%20Fire.mp3"],
+                    src: ["/music/Vosto - Cyber Fire.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -463,9 +721,10 @@ $(document).ready(function () {
             img: "/images/ZAMILSKA - ARMY.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ZAMILSKA%20-%20ARMY.mp3"],
+                    src: ["/music/ZAMILSKA - ARMY.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -476,9 +735,10 @@ $(document).ready(function () {
             img: "/images/ZAMILSKA - CLOSER.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ZAMILSKA%20-%20CLOSER.mp3"],
+                    src: ["/music/ZAMILSKA - CLOSER.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -489,9 +749,10 @@ $(document).ready(function () {
             img: "/images/ZAMILSKA - FFRAY.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ZAMILSKA%20-%20FFRAY.mp3"],
+                    src: ["/music/ZAMILSKA - FFRAY.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -502,9 +763,10 @@ $(document).ready(function () {
             img: "/images/ZAMILSKA - RUIN.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ZAMILSKA%20-%20RUIN.mp3"],
+                    src: ["/music/ZAMILSKA - RUIN.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
@@ -515,28 +777,53 @@ $(document).ready(function () {
             img: "/images/ZAMILSKA - SMASH.jpg",
             sound:
                 new Howl({
-                    src: ["https://storage.cloud.google.com/synthwaveradio.appspot.com/music/ZAMILSKA%20-%20SMASH.mp3"],
+                    src: ["/music/ZAMILSKA - SMASH.mp3"],
                     volume: 0.1,
-                    onend: function(){
+                    preload: false,
+                    onend: function () {
                         $("#forward").click();
                     }
                 }),
         },
 
-        ];
+    ];
 
-    
+    // var mongoose = require("mongoose");
+    // mongoose.connect("mongodb://localhost:27017/synthwave_radio_stats", { useNewUrlParser: true, useUnifiedTopology: true });
 
-    for(var i = 0; i < music.length; i++){
-        $("#trackList").append("<li class = 'list-group-item'><i class='fas fa-play' style='display:none'></i> &nbsp&nbsp" + music[i].name + "</li>");
+    // var trackSchema = new mongoose.Schema({
+    //     name: String,
+    //     plays: Number
+    // });
+
+    // var Track = mongoose.model("Track", trackSchema);
+
+
+
+    for (var i = 0; i < music.length; i++) {
+        $("#trackList").append("<li class = 'list-group-item'><i class='fas fa-play' style='display:none'></i> &nbsp&nbsp" + music[i].name + /*"<div class='d-flex justify-content-end' style = 'float:right'><i class='fas fa-undo-alt'> <span><span></i></div>*/"</li>");
+        // Track.create({name: music[i].name, plays: 0});
     }
 
     var track_index = Math.floor((Math.random() * music.length));
-
+    $(".list-group-item").on("click", function(){
+        for(var i = 0; i < music.length; i++){
+            if((this.innerText.replace(/\s+/g, '')) === music[i].name.replace(/\s+/g, '')){
+                if(music[track_index].sound.playing()){
+                    music[track_index].sound.stop();
+                }
+                track_index = i;
+                $("#play").click();
+                // music[i].sound.load();
+                // music[i].sound.play();
+            }
+        }
+    });
     $("#play").on("click", function (event) {
-        console.log(track_index);
+        //console.log(track_index);
         event.stopImmediatePropagation();
         if (!$("#play").hasClass("active")) {
+            music[track_index].sound.load();
             music[track_index].sound.play();
             $("#trackList").children().eq(track_index).removeClass("pause");
             $("#trackList").children().eq(track_index).addClass("active");
@@ -555,19 +842,21 @@ $(document).ready(function () {
             $("#trackList").children().eq(track_index).children().removeClass("fa-play").addClass("fa-pause");
         }
         $("#play").toggleClass("active");
-        
+
     });
 
     $("#forward").on("click", function (event) {
         if ($("#play").hasClass("active")) {
             event.stopImmediatePropagation();
             music[track_index].sound.stop();
+            music[track_index].sound.unload();
             var last_track = track_index;
             track_index++;
             if (track_index >= (music.length)) {
                 track_index = 0;
             }
-            console.log(track_index);
+            //console.log(track_index);
+            music[track_index].sound.load();
             music[track_index].sound.play();
             $("#trackList").children().eq(track_index).addClass("active");
             $("#trackList").children().eq(last_track).removeClass("active");
@@ -585,12 +874,14 @@ $(document).ready(function () {
         if ($("#play").hasClass("active")) {
             event.stopImmediatePropagation();
             music[track_index].sound.stop();
+            music[track_index].sound.unload();
             var last_track = track_index;
             track_index--;
             if (track_index < 0) {
-                track_index = (music.length-1);
+                track_index = (music.length - 1);
             }
-            console.log(track_index);
+            //console.log(track_index);
+            music[track_index].sound.load();
             music[track_index].sound.play();
             $("#trackList").children().eq(track_index).addClass("active");
             $("#trackList").children().eq(last_track).removeClass("active");
@@ -603,28 +894,25 @@ $(document).ready(function () {
         }
     });
 
-   
 
-    $("#track-list-btn").clickToggle(function(){
+
+    $("#track-list-btn").clickToggle(function () {
         $(".accordion").css("clip-path", "polygon(92% 0, 100% 5%, 100% 100%, 8% 100%, 0% 95%, 0 0)");
-    }, function(){
+    }, function () {
         $(".accordion").css("clip-path", "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0");
     });
 
-    
 
-    
+
+
 
 });
 
-
-
-
-(function($) {
-    $.fn.clickToggle = function(func1, func2) {
+(function ($) {
+    $.fn.clickToggle = function (func1, func2) {
         var funcs = [func1, func2];
         this.data('toggleclicked', 0);
-        this.click(function() {
+        this.click(function () {
             var data = $(this).data();
             var tc = data.toggleclicked;
             $.proxy(funcs[tc], this)();
